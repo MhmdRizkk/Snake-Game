@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="bg-radial"></div>
+    <div class="bg-grid"></div>
+    <main class="layout">
+      <section class="hud">
+        <p class="eyebrow">Shipboard Arcade</p>
+        <h1>Snake Nexus</h1>
+        <p>Score: <span id="score-value">0</span></p>
+        <p>Status: <span id="status-value">Running</span></p>
+        <div class="actions">
+          <button id="pause-button" type="button">Pause</button>
+          <button id="restart-button" type="button">Restart</button>
+        </div>
+        <p class="hint">Move: Arrow keys/WASD, Pause: Space, Restart: R</p>
+      </section>
+      <section class="board-wrap">
+        <div id="board" class="board" aria-label="Snake board"></div>
+        <div id="game-over-overlay" class="game-over-overlay" aria-live="polite">
+          <p class="overlay-kicker">Critical Failure</p>
+          <h2>GAME OVER</h2>
+          <p>Reinitialize the grid to continue.</p>
+          <button id="overlay-restart-button" type="button">Restart Mission</button>
+        </div>
+        <div id="touch-controls" class="touch-controls" aria-label="Touch controls"></div>
+      </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
